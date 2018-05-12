@@ -1,0 +1,69 @@
+MASTERPIECE
+
+5/11/2018 8:58 PM
+
+Tell me how you feel.
+
+I feel... like I'm under pressure. Like I have to think clearly or I won't be allowed to breathe. Like I better make the right decisions, or else.
+
+It's a kind of fear?
+
+Not exactly. Fear's there, if I blow it. But it's more a sense of duty, of obligation.
+
+What do you think would happen if you didn't meet your obligations?
+
+Probably nothing, like usual. Other than my life slowly slipping further and further out of control. Other than maybe dying without ever really feeling like I did something worth mentioning.
+
+Are you afraid to die?
+
+Not exactly.
+
+So what are we building first?
+
+First we're stretching. Compose components out of component components.
+
+I mean, yes, that is how one Reacts, but I really feel like we should have some particular goal that we're aiming for, if only to make our decisions less arbitrary.
+
+Well. We like writing dialogues, right?
+
+Apparently.
+
+Let's display some heckin' dialogue in a vaguely interesting-looking way. With the idea being, we'll turn it into branching dialogue soon enough. Incorporate player input and stuff. Some sort of JSON input, converted to an HTML view that's, like, a box for the dialogue, and a username / pic in the top left. Orrr right, depending on which person it is. Maybe middle, even!
+
+Like Homestuck pesterlogs but without having to keep track of anyone's two-character abbreviation.
+
+They can still have text colors, though, if they really want to.
+
+Can we have a nice parchment-y tan for the bg color?
+
+I don't see why not.
+
+We're going to need to think about how to structure the data. I guess everything has a timestamp, a user id, and a message. And then we sort them in order of timestamp and group them by adjacent-message-sharing-user id so we know which boxes to put things in
+
+Each individual message has a timestamp? I guess it must... but, bluh! That kind of data would be obnoxious to generate! What we're really looking for is a Sequence, which has individual MessageGroups inside it, each of which has a number of distinct Messages, ordered in a specific order.
+
+Is that right? That doesn't seem quite right somehow. Anyway, what dialogue are we going to use as our placeholder example?
+
+It should justify its own existence. Be a little Chunky Bacon-y.
+
+Relatedly. I want you to have some bosses that you fight, at some point in this masterpiece. We're gonna have some big thing, and it's gonna be violent and a little puzzle-y, and you're gonna fight it with strategrerthy
+
+Can't argue with strategrerthy
+
+No one can!
+
+But Like
+Okay
+You're running out some contradictions here, mate
+Do you want to catch the eye of a potential employer or do you want Communist agitprop?
+Do you want to fight monsters or do you want to tell a story?
+
+We don't need to know yet, honestly.
+
+We just need to start laying foundation for an unending iterative dance
+
+I'm scared again because it feels like I don't know what I'm doing at all, on even a basic level.
+
+Ironically, you know exactly what you're doing on a technical level, which is the only level you really need to impress anyone on.
+
+I mean, I wouldn't say I know exactly what I'm doing on that level, either.
