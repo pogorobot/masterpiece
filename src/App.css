@@ -1,8 +1,14 @@
 .App {
   text-align: center;
+  font-size: xx-large;
   background-color: #CCC;
   padding: 20px;
   border-radius: 5px;
+}
+
+.Faithless {
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .App-logo {
