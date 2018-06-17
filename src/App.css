@@ -1,26 +1,53 @@
 .App {
   text-align: center;
-  font-size: xx-large;
-  background-color: #DED;
+  font-size: large;
+  background-color: #aea;
   padding: 20px;
   border-radius: 5px;
 }
 
+
+body {
+  counter-reset: item;
+}
+ol {
+  list-style: none;
+}
+li {
+  counter-increment: item;
+  margin-bottom: 5px;
+}
+li:before {
+  margin-right: 5px;
+  content: counter(item);
+  background: #88e;
+  border-radius: 75%;
+  color: white;
+  width: 1.2em;
+  display: inline-block;
+
+  font-size: small;
+  vertical-align: text-top;
+}
+
 .Masterpiece {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
 }
 
 .Master {
-  text-align: left;
+  float: left;
   padding-top: 20px;
   padding-bottom: 40px;
+  padding-left: 20px;
 }
 
 .Piece {
-  text-align: right;
-  padding-top: 40px;
-  padding-bottom: 20px;
+  float: right;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  padding-right: 20px;
 }
 
 .App-logo {

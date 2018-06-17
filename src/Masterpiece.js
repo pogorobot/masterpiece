@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import Timer from './Timer.js'
 
 class Masterpiece extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {clicked: false};
 
     this.handleClick = this.handleClick.bind(this);
+    this.timeout = this.timeout.bind(this);
+
+    this.state = {clicked: false, seconds: 10, speed: -1 };
   }
+
 
   handleClick(e) {
     this.setState(prevstate => ({
@@ -16,15 +21,36 @@ class Masterpiece extends Component {
   }
 
   render() {
+
     if (this.state.clicked) {
       return (
         <div>
-          <p className="Master"><Master /></p><p className="Piece"> <Piece /></p>
-          <p>The purpose of a masterpiece is to demonstrate mastery.</p>
-          <p>How have you demonstrated mastery today?</p>
-          <p>Here should go a text box</p>
-          <p>Here should go a button</p>
-          <p>Here's How</p>
+          <h2>JadeBot Is A Tank Build</h2>
+          <p><Master /> <Piece /></p>
+          <Router>
+            <div>
+              <Timer start={new Date()} seconds={this.state.seconds} speed={this.state.speed} onTimeout={this.timeout} />
+              <div className="Masterpiece">
+                <ol>
+                  <li>Recruit</li>
+                  <li>Reinforce</li>
+                  <li>Relocate</li>
+                </ol>
+                <p>Okay, so</p>
+                <p>It's a strategy game.</p>
+                <p>The steps above are the basic loop.</p>
+                <p>Recruit by drawing some cars.</p>
+                <p>Reinforce by playing some cars (in exchange for gold).</p>
+                <p>Relocate by using cars' abilities.</p>
+                <p>Your entire goal is to move large quantities of Stuff from point A to point B.</p>
+                <p>You win once all the Stuff has been moved.</p>
+                <p>So a basic shit-tier car has 1 cost, 1 capacity, 1 speed</p>
+                <p>Each turn (10s) it takes 1 stuff 1 km</p>
+              </div>
+
+              <Route path="/base" component={Base} />
+            </div>
+          </Router>
         </div>
       );
     }
@@ -33,6 +59,13 @@ class Masterpiece extends Component {
           <p className="Masterpiece" onClick={this.handleClick}>masterpiece</p>
       );
     }
+  }
+
+  timeout() {
+    this.setState(prevstate => ({
+      seconds: prevstate.seconds * 10,
+      speed: prevstate.speed * 7
+    }));
   }
 
 
@@ -54,7 +87,9 @@ class Master extends Component {
 
   render() {
     return (
-      <span className="Master">master</span>
+      <div className="Master">
+        <p>shipping</p>
+      </div>
     );
   }
 }
@@ -62,8 +97,18 @@ class Master extends Component {
 class Piece extends Component {
   render() {
     return (
-      <span className="Piece">piece</span>
+      <div className="Piece">
+        <p>routes</p>
+      </div>
     );
+  }
+}
+
+class Base extends Component {
+  render() {
+    return (
+      <h2>YOU ARE IN THE BASE</h2>
+    )
   }
 }
 
